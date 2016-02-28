@@ -1,0 +1,43 @@
+{
+  "name": "spotify-react-picturify",
+  "version": "0.0.1",
+  "description": "derived from the react-babel-webpack-boilerplate",
+  "main": "app/main.js",
+  "scripts": {
+    "lint": "eslint 'app/**/*.@(js|jsx)'",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack",
+    "start": "webpack-dev-server --devtool eval --progress --hot --colors --content-base app",
+    "deploy": "NODE_ENV=production webpack -p --config webpack.production.config.js",
+    "validate": "npm ls"
+  },
+  "dependencies": {
+    "babel-runtime": "~6.2.0",
+    "flux": "^2.1.1",
+    "node-vibrant": "^2.0.3",
+    "querystring": "^0.2.0",
+    "react": "~0.14.3",
+    "react-dom": "~0.14.3",
+    "spotify-web-api-js": "^0.18.0"
+  },
+  "devDependencies": {
+    "babel-core": "~6.2.1",
+    "babel-eslint": "~4.1.6",
+    "babel-loader": "~6.2.0",
+    "babel-plugin-transform-runtime": "~6.1.18",
+    "babel-preset-es2015": "~6.1.18",
+    "babel-preset-react": "~6.1.18",
+    "babel-preset-stage-0": "~6.1.18",
+    "copy-webpack-plugin": "~0.3.3",
+    "css-loader": "~0.23.0",
+    "eslint": "~1.10.1",
+    "eslint-config-airbnb": "~1.0.0",
+    "eslint-plugin-react": "~3.10.0",
+    "open-browser-webpack-plugin": "0.0.1",
+    "style-loader": "~0.13.0",
+    "webpack": "~1.12.9",
+    "webpack-dev-server": "~1.14.0"
+  },
+  "author": "Matthias Kern",
+  "license": "MIT"
+}
