@@ -33,7 +33,8 @@ module.exports = {
       { from: './app/index.html', to: 'index.html' },
       { from: './app/normalize.css', to: 'normalize.css' },
       { from: './app/main.css', to: 'main.css'},
-      { from: './app/skeleton.css', to: 'skeleton.css' }
+      { from: './app/skeleton.css', to: 'skeleton.css' },
+      { from: './app/image-icon.png', to: 'image-icon.png' }
     ]),
   ]
 };

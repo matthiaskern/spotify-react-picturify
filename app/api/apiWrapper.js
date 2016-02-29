@@ -10,7 +10,7 @@ let _config = {
     client_id: "3a98f1fe9154432687c16bd816a605fe",
     secret: "5663fc435df14d7996eb220b69470147",
     scope: "playlist-modify-public playlist-read-private playlist-read-collaborative",
-    redirect_uri: "http://localhost:8080",
+    redirect_uri: "https://matthiaskern.github.io/spotify-react-picturify/",
     response_type: "token"
   },
   redirectUrl: "https://accounts.spotify.com/authorize?",
