@@ -36,12 +36,13 @@ export default class DropZone extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="one-half column">
         <input type="file" accept="image/*" style={{display: "none"}} onChange={this.fileHandler} ref={(ref) => this.input = ref}/>
         <div onDragEnter={this.prevent}
            onDragOver={this.prevent}
            onDrop={this.fileHandler}
-           style={{height: "500px", width: "500px", background: "url(\"image-icon.png\") center no-repeat", margin: "0 auto", cursor: "pointer"}}
+           className="u-max-full-width"
+           style={{ height: "50rem", background: "url(\"image-icon.png\") center no-repeat", margin: "0 auto", cursor: "pointer"}}
            onClick={this.clickHandler}>
         </div>
         <p style={{textAlign: "center"}} >Drag an Image(png or jpeg) here or just <a href="#" onClick={this.clickHandler}>click</a>!</p>

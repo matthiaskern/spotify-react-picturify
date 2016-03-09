@@ -89,7 +89,7 @@ export default class homePage extends React.Component {
         image = <Image image={this.state.image} ref={(ref) => this.image = ref} onImageLoad={this._updateSwatch}/>;
       }
       if(this.state.genre){
-        genreHeader = <h4>{this.state.genre}</h4>;
+        genreHeader = <h4>Genre: {this.state.genre}</h4>;
       }
       if(this.state.tracks){
         list = <TrackList tracks={this.state.tracks}/>;
@@ -103,8 +103,9 @@ export default class homePage extends React.Component {
       authButton = <a href="#" onClick={this._auth} className="button">Log In</a>;
     }
     return (
-      <div>
+      <div className="row">
         {image}
+        {genreHeader}
         {dropzone}
         {authButton}
         {saveComponent}

@@ -1,4 +1,4 @@
-# Example app using react, flux and the spotify api
+# Example react app using  flux, the Spotify api and Vibrant.js.
 
 with the help of react-babel-webpack-boilerplate and spotify-web-api-js
 ```
