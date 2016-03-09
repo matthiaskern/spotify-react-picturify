@@ -17,7 +17,7 @@ export default class DropZone extends React.Component {
     event.stopPropagation();
     event.preventDefault();
   }
-  
+
   fileHandler(event){
     event.preventDefault();
     let transfer = event.dataTransfer;
@@ -38,7 +38,7 @@ export default class DropZone extends React.Component {
 
   render() {
     return (
-      <div className="one-half column">
+      <div className="twelve columns">
         <input type="file" accept="image/*" style={{display: "none"}} onChange={this.fileHandler} ref={(ref) => this.input = ref}/>
         <div onDragEnter={this.prevent}
            onDragOver={this.prevent}
