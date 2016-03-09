@@ -114,26 +114,22 @@ export default class apiWrapper {
             .then( response => {
               if (response.snapshot_id) {
                 resolve(true);
-                // return handleSuccess();
               }
             })
             .catch( error => {
               console.log(error);
               resolve (false);
-              // return handleError();
             });
           }
         })
         .catch( error => {
           console.log(error);
           resolve(false);
-          // return handleError();
         });
       })
       .catch( error => {
         console.log(error);
         return false;
-        // return handleError();
       });
     });
 
