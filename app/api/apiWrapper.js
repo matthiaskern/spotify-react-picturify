@@ -10,8 +10,8 @@ let _config = {
     client_id: "3a98f1fe9154432687c16bd816a605fe",
     secret: "5663fc435df14d7996eb220b69470147",
     scope: "playlist-modify-public playlist-read-private playlist-read-collaborative",
-    //redirect_uri: "https://matthiaskern.github.io/spotify-react-picturify/",
-    redirect_uri: "http://localhost:8080", // for development
+    redirect_uri: "https://matthiaskern.github.io/spotify-react-picturify/",
+    //redirect_uri: "http://localhost:8080", // for development
     response_type: "token"
   },
   redirectUrl: "https://accounts.spotify.com/authorize?",
@@ -60,8 +60,8 @@ export default class apiWrapper {
   }
 
   getTracksByGenre(genre) {
-
     const query = "genre:" + genre;
+
     const promise = new Promise((resolve, reject) => {
       let tracks = [];
       this.spotifyApi.searchArtists(query, {limit: 30})
@@ -98,7 +98,6 @@ export default class apiWrapper {
     tracks.forEach( track => {
       track_uris.push(track.uri);
     });
-    console.log(this.spotifyApi.getAccessToken());
 
     const promise = new Promise((resolve, reject) => {
       this.spotifyApi.getMe()
@@ -136,8 +135,8 @@ export default class apiWrapper {
         return false;
         // return handleError();
       });
-
     });
+
     return promise;
   }
 }

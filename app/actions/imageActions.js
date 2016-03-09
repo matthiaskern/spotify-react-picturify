@@ -11,6 +11,7 @@ export default class ImageActions {
       image: image
     });
   }
+  
   static addSwatches(swatches) {
     AppDispatcher.dispatch({
       actionType: ActionTypes.ADD_SWATCHES,

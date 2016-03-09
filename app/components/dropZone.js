@@ -17,6 +17,7 @@ export default class DropZone extends React.Component {
     event.stopPropagation();
     event.preventDefault();
   }
+  
   fileHandler(event){
     event.preventDefault();
     let transfer = event.dataTransfer;
@@ -30,6 +31,7 @@ export default class DropZone extends React.Component {
     this.props.handler(file);
 
   }
+
   clickHandler(){
     this.input.click();
   }

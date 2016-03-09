@@ -31,10 +31,12 @@ export default class homePage extends React.Component {
     this._updateSwatch = this._updateSwatch.bind(this);
     this._save = this._save.bind(this);
   }
+
   componentWillMount(){
     ImageStore.addChangeListener(this._onChange);
     ApiStore.addChangeListener(this._onChange);
   }
+
   componentWillUnMount(){
     ImageStore.removeChangeListener(this._onChange);
     ApiStore.removeChangeListener(this._onChange);
@@ -50,18 +52,22 @@ export default class homePage extends React.Component {
       playlistHasBeenSaved: ApiStore.getSaveStatus()
     });
   }
+
   _auth(){
     ApiActions.authenticate();
   }
+
   _save(userInput){
     ApiActions.savePlaylist(this.state.tracks, userInput);
   }
+
   _updateImage(file) {
     const imageType = /^image\//;
     if (imageType.test(file.type)) {
       ImageActions.addImage(file);
     }
   }
+
   _updateSwatch(){
     let imageNode = ReactDOM.findDOMNode(this.image);
     let src = imageNode.src;

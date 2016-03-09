@@ -8,7 +8,7 @@ export default class trackList extends React.Component {
   }
 
   render() {
-    var tracks = this.props.tracks.map( (track, index) => {
+    const tracks = this.props.tracks.map( (track, index) => {
       return (<li key={index}>{track.artists[0].name} - {track.name}</li>);
     });
     return (

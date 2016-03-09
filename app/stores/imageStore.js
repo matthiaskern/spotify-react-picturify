@@ -44,8 +44,8 @@ imageStoreInstance.dispatchToken = AppDispatcher.register( action => {
       if (vibrantColors[0]){
         const closest = getClosestColor(vibrantColors[0].rgb, colorMappings);
         _genre = closest.genre;
+        imageStoreInstance.emitChange();
       }
-      imageStoreInstance.emitChange();
       break;
 
     default:
