@@ -35,6 +35,7 @@ export default class homePage extends React.Component {
   componentWillMount(){
     ImageStore.addChangeListener(this._onChange);
     ApiStore.addChangeListener(this._onChange);
+    ApiActions.authenticate();
   }
 
   componentWillUnMount(){

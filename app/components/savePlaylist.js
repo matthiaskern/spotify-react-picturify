@@ -28,7 +28,7 @@ export default class savePlaylist extends React.Component {
     return (
       <div>
         <Input label="Playlist Name" name="playlistName" onChange={this._onChange.bind(this)} value={this.state.userInput}/>
-        <a href="#" onClick={this._onClick} className="button">Save as Playlist</a>
+        <a href="#" onClick={this._onClick} className="button" style={{backgroundColor: "#5cb85c"}}>Save as Playlist</a>
       </div>
     );
   }

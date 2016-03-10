@@ -9,7 +9,11 @@ export default class trackList extends React.Component {
 
   render() {
     const tracks = this.props.tracks.map( (track, index) => {
-      return (<li key={index}>{track.artists[0].name} - {track.name}</li>);
+      return (<li
+        style={{borderTop: "1px solid #bbb", margin: "0", padding: "1rem"}}
+        key={index}>
+        {track.artists[0].name} - {track.name}
+      </li>);
     });
     return (
       <div className="4 column offset-by-one columns" style={{marginTop: "1rem"}}>
